@@ -64,10 +64,10 @@ $("#theFullNav").html(`
                       <div class="d-flex align-items-center sidebar-info">
                         <div>
                           <h4 class="mb-0">Yusuf Lawan</h4>
-                          <span class="d-block text-end">User</span>
+                          <span class="d-block text-end">Agent</span>
                         </div>
                       </div>
-                      <img src="images/avatar/1.jpg" alt="">
+                      <img src="../images/avatar/1.jpg" alt="">
                     </div>
                   </a>
                   <div class="dropdown-menu dropdown-menu-end" style="">
@@ -122,7 +122,7 @@ $("#theFullNav").html(`
 
 $(".sidebarMenuuu").html(`
   <li>
-    <a href="user-dashboard.html" aria-expanded="false">
+    <a href="dashboard.html" aria-expanded="false">
       <div class="menu-icon">
         <svg id="icon-home" width="22" height="22" viewBox="0 0 22 22" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -136,11 +136,43 @@ $(".sidebarMenuuu").html(`
       </div>
       <span class="nav-text">Dashboard</span>
     </a>
-
-  </li>  
+  </li>
 
    <li>
-    <a href="user-demand-notices.html" aria-expanded="false">
+    <a href="tax-payers.html" aria-expanded="false">
+      <div class="menu-icon">
+        <svg id="icon-home" width="22" height="22" viewBox="0 0 22 22" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16.3077 20.8538H5.69266C3.181 20.8538 1.146 18.8097 1.146 16.298V9.50548C1.146 8.25882 1.916 6.69132 2.906 5.92132L7.84683 2.07132C9.33183 0.916317 11.706 0.861317 13.246 1.94298L18.911 5.91215C20.0018 6.67298 20.8543 8.30465 20.8543 9.63382V16.3072C20.8543 18.8097 18.8193 20.8538 16.3077 20.8538ZM8.69016 3.15298L3.74933 7.00298C3.0985 7.51632 2.521 8.68048 2.521 9.50548V16.298C2.521 18.0488 3.94183 19.4788 5.69266 19.4788H16.3077C18.0585 19.4788 19.4793 18.058 19.4793 16.3072V9.63382C19.4793 8.75382 18.8468 7.53465 18.1227 7.03965L12.4577 3.07048C11.4127 2.33715 9.68933 2.37382 8.69016 3.15298Z"
+            fill="#9C99FF" />
+          <path
+            d="M11 17.1875C10.6242 17.1875 10.3125 16.8758 10.3125 16.5V13.75C10.3125 13.3742 10.6242 13.0625 11 13.0625C11.3758 13.0625 11.6875 13.3742 11.6875 13.75V16.5C11.6875 16.8758 11.3758 17.1875 11 17.1875Z"
+            fill="#9C99FF" />
+        </svg>
+      </div>
+      <span class="nav-text">Tax Payers</span>
+    </a>
+  </li>
+
+   
+
+
+
+
+
+`)
+
+$("#footer").html(`
+  <div class="copyright">
+    <p>Copyright © Invoicing 2025
+    </p>
+  </div>
+`)
+
+
+{/* <li>
+    <a href="demand-notices.html" aria-expanded="false">
       <div class="menu-icon">
         <svg id="icon-home" width="22" height="22" viewBox="0 0 22 22" fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -154,33 +186,21 @@ $(".sidebarMenuuu").html(`
       </div>
       <span class="nav-text">Demand Notices</span>
     </a>
-  </li> 
+  </li>  */}
 
-  <li>
-
-  <li>
-    <a href="payment-history.html" aria-expanded="false">
-      <div class="menu-icon">
-        <svg id="icon-home" width="22" height="22" viewBox="0 0 22 22" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M16.3077 20.8538H5.69266C3.181 20.8538 1.146 18.8097 1.146 16.298V9.50548C1.146 8.25882 1.916 6.69132 2.906 5.92132L7.84683 2.07132C9.33183 0.916317 11.706 0.861317 13.246 1.94298L18.911 5.91215C20.0018 6.67298 20.8543 8.30465 20.8543 9.63382V16.3072C20.8543 18.8097 18.8193 20.8538 16.3077 20.8538ZM8.69016 3.15298L3.74933 7.00298C3.0985 7.51632 2.521 8.68048 2.521 9.50548V16.298C2.521 18.0488 3.94183 19.4788 5.69266 19.4788H16.3077C18.0585 19.4788 19.4793 18.058 19.4793 16.3072V9.63382C19.4793 8.75382 18.8468 7.53465 18.1227 7.03965L12.4577 3.07048C11.4127 2.33715 9.68933 2.37382 8.69016 3.15298Z"
-            fill="#9C99FF" />
-          <path
-            d="M11 17.1875C10.6242 17.1875 10.3125 16.8758 10.3125 16.5V13.75C10.3125 13.3742 10.6242 13.0625 11 13.0625C11.3758 13.0625 11.6875 13.3742 11.6875 13.75V16.5C11.6875 16.8758 11.3758 17.1875 11 17.1875Z"
-            fill="#9C99FF" />
-        </svg>
-      </div>
-      <span class="nav-text">Payment History</span>
-    </a>
-  </li> 
-
-
-`)
-
-$("#footer").html(`
-  <div class="copyright">
-    <p>Copyright © Invoicing 2025
-    </p>
-  </div>
-`)
+//   <li>
+//   <a href="payment-history.html" aria-expanded="false">
+//     <div class="menu-icon">
+//       <svg id="icon-home" width="22" height="22" viewBox="0 0 22 22" fill="none"
+//         xmlns="http://www.w3.org/2000/svg">
+//         <path
+//           d="M16.3077 20.8538H5.69266C3.181 20.8538 1.146 18.8097 1.146 16.298V9.50548C1.146 8.25882 1.916 6.69132 2.906 5.92132L7.84683 2.07132C9.33183 0.916317 11.706 0.861317 13.246 1.94298L18.911 5.91215C20.0018 6.67298 20.8543 8.30465 20.8543 9.63382V16.3072C20.8543 18.8097 18.8193 20.8538 16.3077 20.8538ZM8.69016 3.15298L3.74933 7.00298C3.0985 7.51632 2.521 8.68048 2.521 9.50548V16.298C2.521 18.0488 3.94183 19.4788 5.69266 19.4788H16.3077C18.0585 19.4788 19.4793 18.058 19.4793 16.3072V9.63382C19.4793 8.75382 18.8468 7.53465 18.1227 7.03965L12.4577 3.07048C11.4127 2.33715 9.68933 2.37382 8.69016 3.15298Z"
+//           fill="#9C99FF" />
+//         <path
+//           d="M11 17.1875C10.6242 17.1875 10.3125 16.8758 10.3125 16.5V13.75C10.3125 13.3742 10.6242 13.0625 11 13.0625C11.3758 13.0625 11.6875 13.3742 11.6875 13.75V16.5C11.6875 16.8758 11.3758 17.1875 11 17.1875Z"
+//           fill="#9C99FF" />
+//       </svg>
+//     </div>
+//     <span class="nav-text">Payment History</span>
+//   </a>
+// </li> 
