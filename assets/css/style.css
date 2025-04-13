@@ -33691,3 +33691,40 @@ div#example5_wrapper .form-check-input {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
 }
+
+.step {
+      display: none;
+    }
+    .step.active {
+      display: block;
+    }
+    .progress-sidebar {
+      list-style: none;
+      padding-left: 0;
+    }
+    .progress-sidebar li {
+      padding: 10px;
+      border-left: 4px solid lightgray;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .progress-sidebar li.active {
+      border-left: 4px solid blue;
+      background-color: #f0f8ff;
+      font-weight: bold;
+    }
+    .tick {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: blue;
+      color: white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+    }
+    .tick.inactive {
+      background-color: lightgray;
+    }

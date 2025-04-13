@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Payment System">
+  <meta name="format-detection" content="telephone=no">
+  <!-- PAGE TITLE HERE -->
+  <title>Create Demand Notice</title>
+  <!-- FAVICONS ICON -->
+  <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+  <link href="../assets/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-select-country/css/bootstrap-select-country.min.css">
+  <link rel="stylesheet" href="../assets/vendor/jquery-nice-select/css/nice-select.css">
+  <!--swiper-slider-->
+  <link rel="stylesheet" href="../assets/vendor/swiper/css/swiper-bundle.min.css">
+  <link href="../assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <!-- Style css -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="dark-mode">
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <div id="main-wrapper" class="wallet-open active show">
+
+    <div id="theFullNav">
+      <!-- COMING FROM NAV.JS -->
+    </div>
+
+
+    <div class="deznav">
+      <div class="deznav-scroll">
+        <ul class="metismenu sidebarMenuuu" id="menu">
+          <!-- COMING FROM NAV.JS -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="content-body">
+
+      <!-- row -->
+        <div class="container-fluid pt-0">
+            <div class="row">
+                <div class="col-xl-12">
+
+                <!-- MAIN BODY -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="page-titles">
+                            <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb">
+                                <li class="breadcrumb-item ps-0"><a href="invoice.html#">Demand Notice</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">New Demand Notice</li>
+                              </ol>
+                            </nav>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="row p-3 d-flex justify-content-between">
+                    <div class="col-md-4 p-0">
+                      <ul class="progress-sidebar">
+                        <li class="step-indicator active" id="step1-indicator"><span class="tick" id="tick-0">✓</span> Business Owner Lookup
+                          <br>Please provide your customer's means of identification
+                        </li>
+                        <li class="step-indicator" id="step2-indicator"><span class="tick" id="tick-0">✓</span> Tax Details
+                          <br>Please provide your customer's means of identification
+                        </li>
+                        <li class="step-indicator" id="step3-indicator"><span class="tick" id="tick-0">✓</span> Confirm Notice
+                          <br>Please provide your customer's means of identification
+                        </li>
+                      </ul>
+                    </div>
+  
+                    <div class="col-md-6 p-0">
+                      <div class="p-4 bg-white rounded-3">
+                          <h3 class="mb-4 mt-4 text-center">Creating New Demand Notice</h3>
+                          
+                          <form id="signupForm">
+                            <!-- Step 1: Customer Identification -->
+                            <div id="step1">
+                              <div id="section1" class="">
+                                <div class="mb-3 mx-4 d-flex flex-column">
+                                  <h4 class="">Automatic Filling</h4>
+                                  <label>Select business owner's ID</label>
+                                  <div class="check-bx d-flex">
+                                    <div class="form-check">
+                                      <input class="form-check-input" name="idType" type="checkbox" id="tinCheck">
+                                      <label class="form-check-label" for="tinCheck" style="margin-right: 2rem;">TIN</label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input class="form-check-input" name="idType" type="checkbox" id="bvnCheck">
+                                      <label class="form-check-label" for="bvnCheck">BVN</label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mb-4 mx-4">
+                                  <label>ID Number</label>
+                                  <input type="text" class="form-control" required placeholder="Enter the selected ID number">
+                                  <button type="button" class="btn btn-primary mt-4" onclick="fetchBusinessOwner()">Fetch</button>
+                                </div>
+  
+                                <hr class="mx-4 mb-4">
+                              </div>
+
+                              <div id="section2" class="mb-3 d-none">
+                                <h4 class="mx-4">Business Owner's Personal Details</h4>
+                                <div id="" class="mb-4 mx-4">
+                                  <input type="text" class="form-control" disabled placeholder="First Name">
+                                </div>
+                                <div id="" class="mb-4 mx-4">
+                                  <input type="text" class="form-control" disabled placeholder="Last Name">
+                                </div>
+                                <div id="" class="mb-4 mx-4">
+                                  <input type="email" class="form-control" disabled placeholder="Email">
+                                </div>
+                                <div id="" class="mb-4 mx-4">
+                                  <input type="phone" class="form-control" disabled placeholder="Phone">
+                                </div>
+                                <div class="mb-4 mx-4">
+                                  <label>ID Number</label>
+                                  <input type="text" class="form-control" disabled placeholder="Enter the selected ID number">
+                                </div>
+                                <div id="" class=" mx-4">
+                                  <p>Not your details? <button id="fill-in-manually" type="button" style="background-color: transparent; border: none; outline: none;">Fill in manually</button></p>
+                                </div>
+                                <div class="mb-4 mx-4">
+                                </div>
+                                <button type="button" class="btn btn-success mb-2 mx-4" onclick="goToStep(2)">Next</button>
+                              </div>
+
+
+                              <div id="manual-filling" class="mb-3 d-flex flex-column">
+                                <h4 class="mx-4">Fill in Manually</h4>
+                                <label class="mx-4">Select business owner's ID</label>
+                                <div class="check-bx d-flex mx-4 mb-2" >
+                                  <div class="form-check">
+                                    <input class="form-check-input" name="idType" type="checkbox" id="tinCheck">
+                                    <label class="form-check-label" for="tinCheck" style="margin-right: 2rem;">TIN</label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" name="idType" type="checkbox" id="bvnCheck">
+                                    <label class="form-check-label" for="bvnCheck">BVN</label>
+                                  </div>
+                                </div>
+                                <div id="" class="mb-4 mx-4">
+                                  <input type="text" class="form-control" placeholder="First Name">
+                                </div>
+                                <div id="" class="mb-4 mx-4">
+                                  <input type="text" class="form-control" placeholder="Last Name">
+                                </div>
+                                <div id="" class="mb-4 mx-4">
+                                  <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div id="" class="mb-4 mx-4">
+                                  <input type="phone" class="form-control" placeholder="Phone">
+                                </div>
+                                <div class="mb-4 mx-4">
+                                  <label>ID Number</label>
+                                  <input type="text" class="form-control" required placeholder="Enter the selected ID number">
+                                </div>
+                                <button type="button" class="btn btn-success mt-3 mx-4" onclick="goToStep(2)">Next</button>
+                              </div>
+                            </div>
+
+                            <!-- Step 2: Tax details -->
+                            <div id="step2" class="d-none">
+                              <!-- <h4>Step 2: Tax Details</h4> -->
+                              <div class="mb-3 mx-4 d-flex flex-column">
+                                <label for="">Tax type</label>
+                                <select class="form-group mb-2">
+                                  <option selected disabled>Select Tax Type</option>
+                                  <option>Income Tax</option>
+                                  <option>Property Tax</option>
+                                  <option>Business Levy</option>
+                                </select>
+                              </div>
+                              <div class="mb-3 mx-4">
+                                <label for="">Amount</label>
+                                <input type="number" class="form-control mb-2" placeholder="Enter amount">
+                              </div>
+                              <div class="mb-3 mx-4">
+                                <label for="">Due Date</label>
+                                <input type="date" class="form-control mb-2" placeholder="Enter due date">
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-secondary mx-4" onclick="goToStep(1)">Back</button>
+                                <button type="button" class="btn btn-success mx-4" onclick="goToStep(3)">Next</button>
+                              </div>
+                            </div>
+
+                            <!-- Step 3: Review and create -->
+                            <div id="step3" class="d-none" >
+                              <p class="mb-3 mx-4">Please review your information before submitting.</p>
+                              <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-secondary mx-4" onclick="goToStep(2)">Back</button>
+                                  <button type="submit" class="btn btn-success mx-4 mx-4">Create</button>
+                              </div>
+                              </div>
+        
+                          </form>
+                      </div>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="footer">
+
+    </div>
+
+  </div>
+
+  
+
+  <!--**********************************
+        Scripts
+    ***********************************-->
+  <!-- Required vendors -->
+  <script src="../assets/vendor/global/global.min.js"></script>
+  <script src="../assets/vendor/chart.js/Chart.bundle.min.js"></script>
+  <script src="../assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <!-- Apex Chart -->
+  <script src="../assets/vendor/apexchart/apexchart.js"></script>
+  <!-- Chart piety plugin files -->
+  <script src="../assets/vendor/peity/jquery.peity.min.js"></script>
+  <script src="../assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+  <!--swiper-slider-->
+  <script src="../assets/vendor/swiper/js/swiper-bundle.min.js"></script>
+
+  <!-- Date-picker -->
+  <script src="../assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+  <script src="../assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+  <!-- Dashboard 1 -->
+  <script src="../assets/js/dashboard/dashboard-1.js"></script>
+  <script src="../assets/vendor/wow-master/dist/wow.min.js"></script>
+  <script src="../assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+  <script src="../assets/vendor/bootstrap-select-country/js/bootstrap-select-country.min.js"></script>
+
+  <script src="../assets/js/deznav-2-init.js"></script>
+  <script src="../assets/js/custom.min.js"></script>
+  <script src="../assets/js/demo-2.js"></script>
+  <!-- <script src="js/styleSwitcher.js"></script> -->
+
+  <script src="../assets/js/demand-notice-progress-bar.js"></script>
+
+  <script src="../assets/js/agent-nav.js"></script>
+  <script>
+    displayHeaderTitile('Dashboard') 
+  </script>
+
+<script>
+
+  function fetchBusinessOwner() {
+    // display the section2 and hide the manual filling section
+    document.getElementById('section2').classList.remove('d-none');
+    document.getElementById('manual-filling').classList.add('d-none');
+    // display the manual fill section when the fill in manually button is clicked
+    document.querySelector('#section2 #fill-in-manually').addEventListener('click', function() {
+      document.getElementById('section2').classList.add('d-none');
+      document.getElementById('manual-filling').classList.remove('d-none');
+    });
+    // Get the selected ID type (TIN or BVN)
+    const tinCheck = document.getElementById('tinCheck').checked;
+    const bvnCheck = document.getElementById('bvnCheck').checked;
+    const idNumber = document.querySelector('input[placeholder="Enter the selected ID number"]').value;
+
+    // Fetch businessowner's details based on TIN or BVN
+    // Implement your API call here
+  }
+</script>
+</body>
+
+</html>
+
+

@@ -10,17 +10,17 @@
   <!-- PAGE TITLE HERE -->
   <title>Demand Notice</title>
   <!-- FAVICONS ICON -->
-  <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
-  <link href="../vendor/wow-master/css/libs/animate.css" rel="stylesheet">
-  <link href="../vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../vendor/bootstrap-select-country/css/bootstrap-select-country.min.css">
-  <link rel="stylesheet" href="../vendor/jquery-nice-select/css/nice-select.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+  <link href="../assets/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/bootstrap-select-country/css/bootstrap-select-country.min.css">
+  <link rel="stylesheet" href="../assets/vendor/jquery-nice-select/css/nice-select.css">
   <!--swiper-slider-->
-  <link rel="stylesheet" href="../vendor/swiper/css/swiper-bundle.min.css">
-  <link href="../vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/swiper/css/swiper-bundle.min.css">
+  <link href="../assets/vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
   <!-- Style css -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -72,10 +72,11 @@
                                             <thead>
                                                 <tr>
                                                     <th>
-                                                        <input type="checkbox" class="form-check-input" id="checkAll" required="">
+                                                        <!-- <input type="checkbox" class="form-check-input" id="checkAll" required=""> -->
+                                                         S/N
                                                     </th>
                                                     <th>Payer ID</th>
-                                                    <th>Invoice Number</th>
+                                                    <th>Notice ID</th>
                                                     <th>Amount</th>
                                                     <th>Due Date</th>
                                                     <th class="text-center">Status</th>
@@ -84,14 +85,15 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>
+                                                    <!-- <td>
                                                         <div class="checkbox me-0 align-self-center">
                                                             <div class="custom-control custom-checkbox ">
                                                                 <input type="checkbox" class="form-check-input" id="check8" required="">
                                                                 <label class="custom-control-label" for="check8"></label>
                                                             </div>
                                                         </div>
-                                                    </td>
+                                                    </td> -->
+                                                    <td>1</td>
                                                     <td>1234567890</td>
                                                     <td>#INV-0001234</td>
                                                     <td class= "doller">$ 650,036.34 </td>
@@ -117,7 +119,6 @@
                                                                     </svg>
                                                                 </div>
                                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="javascript:void(0);">Pay Now</a>
                                                                     <a class="dropdown-item" href="javascript:void(0);">Edit Notice</a>
                                                                     <a class="dropdown-item" href="javascript:void(0);">View Notice</a>
                                                                 </div>
@@ -127,14 +128,15 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td>
+                                                    <!-- <td>
                                                         <div class="checkbox me-0 align-self-center">
                                                             <div class="custom-control custom-checkbox ">
                                                                 <input type="checkbox" class="form-check-input" id="check8" required="">
                                                                 <label class="custom-control-label" for="check8"></label>
                                                             </div>
                                                         </div>
-                                                    </td>
+                                                    </td> -->
+                                                    <td>2</td>
                                                     <td>1234567890</td>
                                                     <td>#INV-0001234</td>
                                                     <td class= "doller">$ 650,036.34 </td>
@@ -156,7 +158,6 @@
                                                                     </svg>
                                                                 </div>
                                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="javascript:void(0);">Pay Now</a>
                                                                     <a class="dropdown-item" href="javascript:void(0);">Edit Notice</a>
                                                                     <a class="dropdown-item" href="javascript:void(0);">View Notice</a>
                                                                 </div>
@@ -166,14 +167,15 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td>
+                                                    <!-- <td>
                                                         <div class="checkbox me-0 align-self-center">
                                                             <div class="custom-control custom-checkbox ">
                                                                 <input type="checkbox" class="form-check-input" id="check8" required="">
                                                                 <label class="custom-control-label" for="check8"></label>
                                                             </div>
                                                         </div>
-                                                    </td>
+                                                    </td> -->
+                                                    <td>3</td>
                                                     <td>1234567890</td>
                                                     <td>#INV-0001234</td>
                                                     <td class= "doller">$ 650,036.34 </td>
@@ -197,7 +199,6 @@
                                                                     </svg>
                                                                 </div>
                                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="javascript:void(0);">Pay Now</a>
                                                                     <a class="dropdown-item" href="javascript:void(0);">Edit Notice</a>
                                                                     <a class="dropdown-item" href="javascript:void(0);">View Notice</a>
                                                                 </div>
@@ -264,33 +265,33 @@
         Scripts
     ***********************************-->
   <!-- Required vendors -->
-  <script src="../vendor/global/global.min.js"></script>
-  <script src="../vendor/chart.js/Chart.bundle.min.js"></script>
-  <script src="../vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+  <script src="../assets/vendor/global/global.min.js"></script>
+  <script src="../assets/vendor/chart.js/Chart.bundle.min.js"></script>
+  <script src="../assets/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
   <!-- Apex Chart -->
-  <script src="../vendor/apexchart/apexchart.js"></script>
+  <script src="../assets/vendor/apexchart/apexchart.js"></script>
   <!-- Chart piety plugin files -->
-  <script src="../vendor/peity/jquery.peity.min.js"></script>
-  <script src="../vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+  <script src="../assets/vendor/peity/jquery.peity.min.js"></script>
+  <script src="../assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
   <!--swiper-slider-->
-  <script src="../vendor/swiper/js/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/swiper/js/swiper-bundle.min.js"></script>
 
   <!-- Date-picker -->
-  <script src="../vendor/bootstrap-datetimepicker/js/moment.js"></script>
-  <script src="../vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="../assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+  <script src="../assets/vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
 
   <!-- Dashboard 1 -->
-  <script src="../js/dashboard/dashboard-1.js"></script>
-  <script src="../vendor/wow-master/dist/wow.min.js"></script>
-  <script src="../vendor/bootstrap-datetimepicker/js/moment.js"></script>
-  <script src="../vendor/bootstrap-select-country/js/bootstrap-select-country.min.js"></script>
+  <script src="../assets/js/dashboard/dashboard-1.js"></script>
+  <script src="../assets/vendor/wow-master/dist/wow.min.js"></script>
+  <script src="../assets/vendor/bootstrap-datetimepicker/js/moment.js"></script>
+  <script src="../assets/vendor/bootstrap-select-country/js/bootstrap-select-country.min.js"></script>
 
-  <script src="../js/deznav-2-init.js"></script>
-  <script src="../js/custom.min.js"></script>
-  <script src="../js/demo-2.js"></script>
+  <script src="../assets/js/deznav-2-init.js"></script>
+  <script src="../assets/js/custom.min.js"></script>
+  <script src="../assets/js/demo-2.js"></script>
   <!-- <script src="js/styleSwitcher.js"></script> -->
 
-  <script src="../js/agent-nav.js"></script>
+  <script src="../assets/js/agent-nav.js"></script>
   <script>
     displayHeaderTitile('Demand Notice') 
   </script>
