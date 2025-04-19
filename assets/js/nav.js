@@ -7,21 +7,11 @@ function displayHeaderTitile(title) {
 $("#theFullNav").html(`
   <div class="nav-header">
       <a href="index.html" class="brand-logo">
-        <svg class="logo-abbr" width="40" height="40" viewBox="0 0 576 672" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M4.00292 165C-30.9998 505 180 618 288.003 672C289.669 671.183 291.364 670.354 293.088 669.511C396.895 618.73 602.494 518.153 572.003 166L288.003 0L4.00292 165ZM63.0234 202.7C35.6872 467.9 203.473 559.88 287.82 602C288.895 601.474 289.986 600.94 291.094 600.399C372.093 560.798 539.498 478.953 515.617 203.48L287.82 74L63.0234 202.7Z"
-            fill="white" />
-          <path d="M499 392L235 238L289 204L514 336L499 392Z" fill="white" />
-          <path d="M499 392L235 238L289 204L514 336L499 392Z" stroke="white" />
-          <path d="M59 278L336 434L290 476L44 334L59 278Z" fill="white" />
-          <path d="M59 278L336 434L290 476L44 334L59 278Z" stroke="white" />
-        </svg>
+        <img style="width: 4rem; height: 4rem; border-radius: 50%;" src="../assets/images/favicon.JPG" alt="">
         <div class="brand-title">
-          <h1 class="mb-0">Salreo</h1>
+          <h3 class="mb-0" style="color: #fff;">TaX System</h3>
         </div>
-
-      </a>
+        </a>
       <div class="nav-control">
         <div class="hamburger">
           <span class="line"></span><span class="line"></span><span class="line"></span>
@@ -63,7 +53,7 @@ $("#theFullNav").html(`
                     <div class="header-info2 d-flex align-items-center">
                       <div class="d-flex align-items-center sidebar-info">
                         <div>
-                          <h4 class="mb-0">Yusuf Lawan</h4>
+                          <h4 class="mb-0"></h4>
                           <span class="d-block text-end">Admin</span>
                         </div>
                       </div>
@@ -71,7 +61,7 @@ $("#theFullNav").html(`
                     </div>
                   </a>
                   <div class="dropdown-menu dropdown-menu-end" style="">
-                    <a href="app-profile.html" class="dropdown-item ai-icon ">
+                    <a href="profile.html" class="dropdown-item ai-icon ">
                       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                         height="24px" viewBox="0 0 24 24" version="1.1" class="svg-main-icon">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -86,7 +76,7 @@ $("#theFullNav").html(`
                       </svg>
                       <span class="ms-2">Profile </span>
                     </a>
-                    <a href="page-login.html" class="dropdown-item ai-icon">
+                    <button id="logoutBtn" class="dropdown-item ai-icon">
                       <svg class="ms-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -95,7 +85,7 @@ $("#theFullNav").html(`
                         <line x1="21" y1="12" x2="9" y2="12"></line>
                       </svg>
                       <span class="ms-2">Logout</span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </li>
@@ -248,3 +238,56 @@ $("#footer").html(`
     </p>
   </div>
 `)
+
+
+
+// call business owners api
+
+
+// Get Admin Details
+const getAdminDetails = async () => {
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    window.location.href = "index.html";
+    return;
+  }
+
+  try {
+    const response = await fetch("http://localhost:8080/tax-backend/admin/profile", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error("Unauthorized or failed to fetch");
+    }
+
+    const result = await response.json();
+    const admin = result.data;
+
+    document.querySelector(".header-info2 h4").innerText = admin.firstName + " " + admin.lastName || "Admin Name";
+    localStorage.setItem("adminId", admin.id);
+
+  } catch (error) {
+    console.error("Error fetching admin:", error);
+  }
+};
+
+// Call it when page loads
+window.addEventListener("DOMContentLoaded", getAdminDetails);
+
+
+
+
+// Admin logout
+document.getElementById("logoutBtn").addEventListener("click", function () {
+  // Remove the token from localStorage
+  localStorage.removeItem("token");
+
+  // Redirect the user to the login page
+  window.location.href = "index.html";
+});

@@ -10,7 +10,7 @@
   <!-- PAGE TITLE HERE -->
   <title>Blacklisted Business</title>
   <!-- FAVICONS ICON -->
-  <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="../assets/images/favicon.JPG">
   <link href="../assets/vendor/wow-master/css/libs/animate.css" rel="stylesheet">
   <link href="../assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/vendor/bootstrap-select-country/css/bootstrap-select-country.min.css">
@@ -62,17 +62,18 @@
                             <thead>
                                 <tr>
                                   <th>S/N</th>
+                                    <th>Business Owner</th>
                                     <th>Business Name</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
                                     <th>Address</th>
-                                    <th>TIN</th>
                                     <th>Reported By (Agent)</th>
                                     <th>Reported On</th>
                                     <th>Reason for Blacklisted</th>
-                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <!-- <tr>
                                   <td>1</td>
                                     <td>Jonas Ventures</td>
                                     <td>No.40 kumasi Crescent Wuse II, FCT</td>
@@ -80,8 +81,11 @@
                                     <td>Musa Isa</td>
                                     <td>2010/07/14</td>
                                     <td>Fake TIN</td>
-                                    <td style="color: red;">Removed</td>
-                                </tr>
+                                    <td>
+                                      <button class="btn btn-outline-danger">Remove</button>
+                                    </td> -->
+                                    <!-- <td style="color: red;">Removed</td> -->
+                                <!-- </tr>
                                 <tr>
                                     <td>2</td>
                                       <td>Jonas Ventures</td>
@@ -90,7 +94,9 @@
                                       <td>Musa Isa</td>
                                       <td>2010/07/14</td>
                                       <td>Fake TIN</td>
-                                      <td style="color: green;">Verified</td>
+                                      <td>
+                                        <button class="btn btn-outline-danger">Remove</button>
+                                      </td>
                                   </tr>
                                   <tr>
                                     <td>3</td>
@@ -100,8 +106,10 @@
                                       <td>Musa Isa</td>
                                       <td>2010/07/14</td>
                                       <td>Fake TIN</td>
-                                      <td style="color: blue;">Pending</td>
-                                  </tr>
+                                      <td>
+                                        <button class="btn btn-outline-danger">Remove</button>
+                                      </td>
+                                  </tr> -->
                             </tbody>
                         </table>
                     </div>
@@ -259,6 +267,7 @@
   <!-- <script src="js/styleSwitcher.js"></script> -->
 
   <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/admin-blacklisted-businesses.js"></script>
   <script>
     displayHeaderTitile('Dashboard') 
   </script>
